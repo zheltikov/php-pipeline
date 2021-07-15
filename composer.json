@@ -11,7 +11,8 @@
 	]
   },
   "require": {
-    "php": "^7.3"
+    "php": "^7.3",
+    "zheltikov/php-invariant": "^1.2"
   },
   "require-dev": {
     "nazar-pc/phpt-tests-runner": "^1.4"
