@@ -44,6 +44,7 @@ class Pipeline
         $resolve = function ($value = null) {
             $this->value = $value;
             $this->is_resolved = true;
+            $this->is_rejected = false;
         };
 
         /**
@@ -52,9 +53,14 @@ class Pipeline
         $reject = function ($reason = null) {
             $this->reason = $reason;
             $this->is_rejected = true;
+            $this->is_resolved = false;
         };
 
-        $executor($resolve, $reject);
+        try {
+            $executor($resolve, $reject);
+        } catch (Throwable $reason) {
+            $reject($reason);
+        }
     }
 
     /**
