@@ -1,14 +1,14 @@
 {
-  "version": "0.0.1",
+  "version": "1.0.0",
   "name": "zheltikov/php-pipeline",
   "type": "library",
   "autoload": {
     "psr-4": {
       "Zheltikov\\Pipeline\\": "src/"
     },
-	"files": [
-		"src/functions.php"
-	]
+    "files": [
+      "src/functions.php"
+    ]
   },
   "require": {
     "php": "^7.3",
